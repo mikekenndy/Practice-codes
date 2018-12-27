@@ -3,7 +3,8 @@
 def commas(list):
     temp = list
     retString = ''
-    temp.insert(len(list) - 1, 'and')
+    if(len(list) > 1):
+        temp.insert(len(list) - 1, 'and')
     for i in list:
         retString += i + ', '
     retString = retString[0:len(retString)-2]
